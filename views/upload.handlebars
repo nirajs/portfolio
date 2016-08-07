@@ -1,0 +1,62 @@
+<h4>Please enter your details:</h6>
+{{#if errors}}
+      {{#each errors}}
+        <div class="alert alert-danger">{{msg}}</div>
+      {{/each}}
+{{/if}}
+
+<form id="detail-form" method="post" action="/users/upload">
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_project">Project Title   *</label>
+                    <input id="form_project" type="text" name="project" class="form-control" placeholder="Please enter your Project title" required="required" setCustomValidity("Username cannot be blank")>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_client">Client</label>
+                    <input id="form_client" type="text" name="client" class="form-control" placeholder="Client ">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_sdate">Start Date * </label>
+                    <input id="form_sdate" type="date" name="sdate" class="form-control"  required="required">
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_edate">End Date * </label>
+                    <input id="form_edate" type="date" name="edate" class="form-control" required="required">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="form_message">About Project *</label>
+                    <textarea id="form_message" name="message" class="form-control" placeholder="Please describe about your project *" rows="4" required="required" data-error="Please,leave us a message."></textarea>
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <input type="submit" class="btn btn-success btn-send" value="Send details">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p class="text-muted"><strong>*</strong> These fields are required.</p>
+            </div>
+        </div>
+
+
+
+</form>

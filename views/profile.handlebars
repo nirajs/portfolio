@@ -1,0 +1,48 @@
+<h2 class="page-header">Projects: </h2>
+
+{{#each result}}
+<br>
+<table class="table table-striped" frame="box">
+  <thead>
+    <tr>
+      <center><th>Project Title #</th></center>
+      <td>{{project}}</td>
+      <td></td>
+      <td></td>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row">Name</th>
+      <td>{{name}}</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">Duration</th>
+      <td>Started on {{sdate}}</td>
+      <td>Completed on {{edate}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">Client</th>
+      <td>{{client}}</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">About The project</th>
+      <td>{{message}}</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">Contact mail</th>
+      <td>{{email}}</td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+{{/each}}
